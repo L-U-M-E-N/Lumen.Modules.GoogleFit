@@ -1,27 +1,22 @@
-﻿using Lumen.Modules.GoogleFit.Common.Models;
+using Lumen.Modules.GoogleFit.Common.Models;
 
 using Microsoft.EntityFrameworkCore;
 
 namespace Lumen.Modules.GoogleFit.Data {
-    public class GoogleFitContext : DbContext {
-        public const string SCHEMA_NAME = "GoogleFit";
+    public class GoogleFitContext(DbContextOptions<GoogleFitContext> options) : DbContext(options) {
+        public const string SCHEMA_NAME = "googlefit";
 
-        public GoogleFitContext(DbContextOptions<GoogleFitContext> options) : base(options) {
-        }
-
-        public DbSet<GoogleFitPointInTime> GoogleFit { get; set; } = null!;
+        public DbSet<DailyStepsPointInTime> DailySteps { get; set; } = null!;
+        public DbSet<HourlyStepsPointInTime> HourlySteps { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             modelBuilder.HasDefaultSchema(SCHEMA_NAME);
 
-            var GoogleFitModelBuilder = modelBuilder.Entity<GoogleFitPointInTime>();
-            GoogleFitModelBuilder.Property(x => x.Time)
-                .HasColumnType("timestamp with time zone");
+            var dailyBuilder = modelBuilder.Entity<DailyStepsPointInTime>();
+            dailyBuilder.HasKey(x => x.Date);
 
-            GoogleFitModelBuilder.Property(x => x.Value)
-                .HasColumnType("integer");
-
-            GoogleFitModelBuilder.HasKey(x => x.Time);
+            var hourlyBuilder = modelBuilder.Entity<HourlyStepsPointInTime>();
+            hourlyBuilder.HasKey(x => x.HourStart);
         }
     }
 }

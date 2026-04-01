@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<TargetFramework>net10.0</TargetFramework>
@@ -7,11 +7,11 @@
 		<AssemblyVersion>1.0.0</AssemblyVersion>
 		<FileVersion>1.0.0</FileVersion>
 		<Version>1.0.0</Version>
-		<UserSecretsId>12b396a4-a415-424f-99fe-819d74368c2b</UserSecretsId>
+		<UserSecretsId>3f8d2a1b-c4e5-4f67-89ab-cd1234567890</UserSecretsId>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Lumen.Modules.Sdk" Version="0.7.1" />
+		<PackageReference Include="Lumen.Modules.Sdk" Version="0.7.2" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.5" />
 	</ItemGroup>
 
@@ -19,4 +19,5 @@
 		<ProjectReference Include="..\Lumen.Modules.GoogleFit.Common\Lumen.Modules.GoogleFit.Common.csproj" />
 		<ProjectReference Include="..\Lumen.Modules.GoogleFit.Data\Lumen.Modules.GoogleFit.Data.csproj" />
 	</ItemGroup>
+
 </Project>

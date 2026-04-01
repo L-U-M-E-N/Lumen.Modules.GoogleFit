@@ -1,1 +1,1 @@
-# LUMEN Module GoogleFit
+# LUMEN Google Fit Module
