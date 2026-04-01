@@ -1,0 +1,20 @@
+name: .NET
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: L-U-M-E-N/reusable-workflow/.github/workflows/build-module.yaml@6.1.0
+    with:
+      SONAR_KEY: lumen-module-template
+      MODULE_NAME: Lumen.Modules.GoogleFit
+      RELEASE_FILES_LOCATION: Lumen.Modules.GoogleFit.Module/bin/Release/net10.0/*.dll
+      CSPROJ: Lumen.Modules.GoogleFit.Module/Lumen.Modules.GoogleFit.Module.csproj
+      RUN_TESTS: 'false'
+
+    secrets:
+      SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
