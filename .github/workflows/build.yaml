@@ -9,7 +9,7 @@ jobs:
   build:
     uses: L-U-M-E-N/reusable-workflow/.github/workflows/build-module.yaml@6.1.0
     with:
-      SONAR_KEY: lumen-module-template
+      SONAR_KEY: lumen-module-googlefit
       MODULE_NAME: Lumen.Modules.GoogleFit
       RELEASE_FILES_LOCATION: Lumen.Modules.GoogleFit.Module/bin/Release/net10.0/*.dll
       CSPROJ: Lumen.Modules.GoogleFit.Module/Lumen.Modules.GoogleFit.Module.csproj

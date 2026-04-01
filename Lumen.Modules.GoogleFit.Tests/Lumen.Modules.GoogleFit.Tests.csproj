@@ -1,11 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net10.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<IsPackable>false</IsPackable>
-		<UserSecretsId>05aabd70-d2b7-4fcc-a50e-070c5e25426b</UserSecretsId>
+		<UserSecretsId>7c1d9e2f-b3a4-4e58-90bc-de2345678901</UserSecretsId>
 	</PropertyGroup>
 
 	<ItemGroup>
