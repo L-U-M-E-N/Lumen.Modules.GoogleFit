@@ -7,7 +7,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Google.Apis.Fitness.v1" Version="1.70.0.3883" />
+		<PackageReference Include="Google.Apis.Fitness.v1" Version="1.74.0.3883" />
 	</ItemGroup>
 
 </Project>
